@@ -4,10 +4,8 @@ export const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 3rem;
-  padding: 3.2rem 3.2rem;
-  background:rgb(255, 255, 255);
-  color: #0F172A;
+  height: 100%;
+  padding: 0 3.2rem;
 `
 
 export const MyInfo = styled.div`

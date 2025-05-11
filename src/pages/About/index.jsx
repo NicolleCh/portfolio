@@ -19,18 +19,20 @@ export default function About() {
       <AboutMe>
         <h2>Sobre Mim</h2>
         <p>
-					Sou uma <strong>Desenvolvedora Front-End</strong> que se diverte criando interfaces funcionais com React!
+          Sou uma <strong>Desenvolvedora Front-End</strong> que se diverte criando interfaces funcionais com React!
 
-					Minha jornada na programação começou pela curiosidade e hoje transformo ideias em experiências digitais funcionais e elegantes, priorizando código limpo, componentização eficiente e uma boa UI/UX.
-				</p>
+          Minha jornada na programação começou pela curiosidade e hoje transformo ideias em experiências digitais funcionais e elegantes, priorizando código limpo, componentização eficiente e uma boa UI/UX.
+        </p>
 
-				<p>
-					Quando não estou desenvolvendo, você me encontra mergulhada em um livro, explorando trilhas ou ouvindo músicas que me inspiram! Adoro aprender coisas novas e compartilhar conhecimento.
-				</p>
+        <p>
+          Quando não estou desenvolvendo, você me encontra mergulhada em um livro, explorando trilhas ou ouvindo músicas que me inspiram! Adoro aprender coisas novas e compartilhar conhecimento.
+        </p>
 
-				<p>
-					Vamos bater um papo sobre tecnologia, projetos e até mesmo suas recomendações de músicas!?
-				</p>
+        <p>
+          Vamos bater um papo sobre tecnologia, projetos e até mesmo suas recomendações de músicas!?
+        </p>
+
+        <button type="button">Download CV</button>
       </AboutMe>
 
       <Skills>

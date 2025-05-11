@@ -10,6 +10,7 @@ const PageWrapper = styled.div`
   flex-direction: column;
   height: 100vh;
   overflow: hidden;
+  /* gap: 12px; */
 `
 
 const Main = styled.main`
