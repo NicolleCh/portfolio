@@ -10,14 +10,11 @@ export default createGlobalStyle`
     font-family: 'Roboto', sans-serif;
   }
 
-  html, body {
-    height: 100%;
-    overflow-x: hidden; /* evita rolagem horizontal */
+  html {
+    scroll-behavior: smooth;
   }
 
-  /* HTML5 display-role reset for older browsers */
-  article, aside, details, figcaption, figure,
-  footer, header, hgroup, menu, nav, section {
+  footer, header, nav, section {
     display: block;
   }
 
@@ -27,11 +24,6 @@ export default createGlobalStyle`
 
   ol, ul {
     list-style: none;
-  }
-
-  table {
-    border-collapse: collapse;
-    border-spacing: 0;
   }
 
   a {

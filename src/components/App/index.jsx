@@ -1,15 +1,24 @@
-import { BrowserRouter } from 'react-router'
 import Global from '../../assets/styles/global'
 
-import PageRoutes from '../../PageRoutes'
+import Header from '../Header'
+import Home from '../../pages/Home'
+import About from '../../pages/About'
+import Projects from '../../pages/Projects'
+import Contact from '../../pages/Contact'
+import Footer from '../Footer'
 
 function App() {
 
   return (
-    <BrowserRouter>
+    <>
       <Global />
-      <PageRoutes />
-    </BrowserRouter>
+      <Header />
+      <Home />
+      <About />
+      <Projects />
+      <Contact />
+      <Footer />
+    </>
   )
 }
 

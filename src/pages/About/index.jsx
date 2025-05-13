@@ -15,7 +15,7 @@ import {
 
 export default function About() {
   return (
-    <Container>
+    <Container id="about">
       <AboutMe>
         <h2>Sobre Mim</h2>
         <p>

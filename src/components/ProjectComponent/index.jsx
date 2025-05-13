@@ -20,8 +20,21 @@ export default function ProjectComponent({
         <p>{appDescription}</p>
 
         <BtnGroup>
-          <NavLink to={liveWebsiteLink}>Live Website</NavLink>
-          <NavLink to={githubCodeLink}>GitHub Code</NavLink>
+          <NavLink
+            to={liveWebsiteLink}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Live Website
+          </NavLink>
+
+          <NavLink
+            to={githubCodeLink}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub Code
+          </NavLink>
         </BtnGroup>
       </ProjectInfo>
 

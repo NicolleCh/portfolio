@@ -6,6 +6,7 @@ export const Container = styled.div`
     align-items: center;
     justify-content: center;
     margin: 0 auto;
+    height: 80vh;
 `
 
 export const PageTitle = styled.span`

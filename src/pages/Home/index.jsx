@@ -4,7 +4,7 @@ import Lucy from '../../assets/images/lucy.png'
 
 export default function Home() {
   return (
-    <Container>
+    <Container id='home'>
       <MyInfo>
         <h1>Olá! Me chamo<br/><strong>Nicolle Chagas!</strong></h1>
         <span>Full Stack Web Developer</span>

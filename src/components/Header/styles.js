@@ -8,6 +8,10 @@ export const Container = styled.header`
   background:rgb(255, 255, 255);
   color:  #0F172A;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
 `
 
 export const Logo = styled.div`
@@ -35,6 +39,7 @@ ul {
     transition: 200ms all ease;
     padding: 12px 24px;
     border-radius: 12px;
+    cursor: pointer;
   }
 
   a.active {

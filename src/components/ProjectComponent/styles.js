@@ -12,7 +12,7 @@ export const Project = styled.div`
 export const ProjectInfo = styled.div`
   display: flex;
   flex-direction: column;
-  flex: 2;
+
 
   span {
     font-size: 24px;

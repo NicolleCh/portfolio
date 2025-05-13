@@ -81,7 +81,7 @@ export default function Contact() {
   }
 
   return (
-    <Container>
+    <Container id='contact'>
       <Form ref={form} onSubmit={handleSubmit} noValidate>
         <span>Entre em contato</span>
         <FormGroup error={getErrorMessageByFieldName('name')}>

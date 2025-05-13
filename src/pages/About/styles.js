@@ -2,8 +2,11 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 6.4rem 3.2rem;
   gap: 6rem;
+  height: 100vh;
 
   h2 {
     font-size: 2.5rem;
