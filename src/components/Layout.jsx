@@ -8,12 +8,13 @@ import styled from 'styled-components'
 const PageWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  overflow: hidden;
-  /* gap: 12px; */
+  min-height: 100vh;
+  /* overflow: hidden; */
 `
 
 const Main = styled.main`
+  display: flex;
+  align-items: center;
   flex: 1;
   overflow-y: auto;
 `

@@ -21,8 +21,6 @@ export default function Projects() {
         previewImage={Website}
       />
 
-
-
       <ProjectComponent
         appType='Web Agency website'
         appName='Web Pix'
@@ -31,7 +29,6 @@ export default function Projects() {
         githubCodeLink='https://google.com.br'
         previewImage={Website}
       />
-
 
       <ProjectComponent
         appType='Website Crawler'
@@ -42,8 +39,6 @@ export default function Projects() {
         previewImage={Website}
       />
 
-
-
       <ProjectComponent
         appType='budgetApp'
         appName='Budget Buddy'
@@ -52,8 +47,6 @@ export default function Projects() {
         githubCodeLink='https://google.com.br'
         previewImage={Website}
       />
-
-
 
       <ProjectComponent
         appType='budgetApp'

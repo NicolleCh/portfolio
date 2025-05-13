@@ -2,10 +2,8 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
-  align-items: center;
-  padding: 0 3.2rem;
+  padding: 6.4rem 3.2rem;
   gap: 6rem;
-  height: 100%;
 
   h2 {
     font-size: 2.5rem;
@@ -32,7 +30,7 @@ export const AboutMe = styled.div`
   }
 
   p + p {
-    margin-top: 2.5rem;
+    margin-top: 1.2rem;
   }
 
   button {
@@ -64,7 +62,7 @@ export const Skills = styled.div`
 
   ul {
     display: grid;
-    grid-template-columns: repeat(4, 25%);
+    grid-template-columns: repeat(3, 33%);
     row-gap: 5rem;
     text-align: center;
   }

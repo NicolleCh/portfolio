@@ -27,7 +27,6 @@ export const ProjectInfo = styled.div`
 
   p {
     font-size: 24px;
-
     color:rgb(83, 83, 83);
     margin-bottom: 32px;
   }
@@ -63,8 +62,5 @@ export const TechsUsed = styled.ul`
 
 export const ProjectPreview = styled.div`
   flex: 1;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
-  border: 1px solid #000000;
-  border-radius: 10px;
   padding: 5px;
 `

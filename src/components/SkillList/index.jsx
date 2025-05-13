@@ -1,13 +1,13 @@
-import { ListItem, ProgressBar, Teste } from './styles'
+import { ListItem /*, ProgressBar, Teste*/ } from './styles'
 
-export default function SkillList({ image, title, progress }) {
+export default function SkillList({ image, title/*,progress*/ }) {
   return (
     <ListItem>
       {image}
       <span>{title}</span>
-      <ProgressBar>
+      {/* <ProgressBar>
         <Teste progress={progress} />
-      </ProgressBar>
+      </ProgressBar> */}
     </ListItem>
   )
 }

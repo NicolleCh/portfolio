@@ -4,19 +4,14 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 3rem;
-  padding: 3.2rem;
-
-  hr {
-    width: 100%;
-    border: 1px solid #e31b6d;
-    margin: 2rem 0;
-  }
+  overflow-y: auto;
 `
 
 export const Header = styled.header`
   display: flex;
   flex-direction: column;
   margin-bottom: 4rem;
+  padding: 3.2rem;
 
   h2 {
     font-size: 2.5rem;
@@ -37,4 +32,3 @@ export const Header = styled.header`
     margin-top: 12px;
   }
 `
-

@@ -19,8 +19,11 @@ export default function About() {
       <AboutMe>
         <h2>Sobre Mim</h2>
         <p>
-          Sou uma <strong>Desenvolvedora Front-End</strong> que se diverte criando interfaces funcionais com React!
+          Sou uma <strong>Desenvolvedora Full Stack</strong> que se diverte criando interfaces funcionais com React!
+          Atualmente estou finalizando o curso de Análise e Desenvolvimento de Sistemas com previsão de término para julho/2025.
+        </p>
 
+        <p>
           Minha jornada na programação começou pela curiosidade e hoje transformo ideias em experiências digitais funcionais e elegantes, priorizando código limpo, componentização eficiente e uma boa UI/UX.
         </p>
 
@@ -40,43 +43,43 @@ export default function About() {
         <ul>
           <SkillList
             title="HTML"
-            image={<SiHtml5 title="html5" color="#e34f26" size={48} />}
+            image={<SiHtml5 title="html5" color="#e34f26" size={56} />}
             progress={'80%'}
           />
 
           <SkillList
             title="CSS"
-            image={<SiCss3 title="css3" color="#1572B6" size={48} />}
+            image={<SiCss3 title="css3" color="#1572B6" size={56} />}
             progress={'80%'}
           />
 
           <SkillList
             title="JavaScript"
-            image={<SiJavascript title="javascript" color="#F7DF1E" size={48} />}
+            image={<SiJavascript title="javascript" color="#F7DF1E" size={56} />}
             progress={'75%'}
           />
 
           <SkillList
             title="TypeScript"
-            image={<SiTypescript title="typescript" color="#3178C6" size={48} />}
+            image={<SiTypescript title="typescript" color="#3178C6" size={56} />}
             progress={'10%'}
           />
 
           <SkillList
             title="Sass"
-            image={<SiSass title="sass" color="#CC6699" size={48} />}
+            image={<SiSass title="sass" color="#CC6699" size={56} />}
             progress={'0%'}
           />
 
           <SkillList
             title="Styled Components"
-            image={<SiStyledcomponents title="styled components" color="#DB7093" size={48} />}
+            image={<SiStyledcomponents title="styled components" color="#DB7093" size={56} />}
             progress={'90%'}
           />
 
           <SkillList
             title="Next.js"
-            image={<SiNextdotjs title="next.js" color="" size={48} />}
+            image={<SiNextdotjs title="next.js" color="#000000" size={56} />}
             progress={'0%'}
           />
         </ul>

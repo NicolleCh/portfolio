@@ -2,9 +2,10 @@ import styled from "styled-components";
 
 export const Container = styled.div`
     display: flex;
+    flex-direction: column;
     align-items: center;
-    height:  75vh;
     justify-content: center;
+    margin: 0 auto;
 `
 
 export const PageTitle = styled.span`
@@ -16,7 +17,7 @@ export const PageTitle = styled.span`
 
 export const Form = styled.form`
     width: 775px;
-    background:rgb(238, 238, 238);
+    background:#ffdeeb;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
     border-radius: 10px;
     display: flex;
@@ -25,9 +26,9 @@ export const Form = styled.form`
     justify-content: center;
 
     span {
-        color:rgb(36, 36, 36);
+        color:rgb(0, 0, 0);
         font-size: 32px;
-        font-weight: 400;
+        font-weight: 300;
         margin: 64px 0;
     }
 

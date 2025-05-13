@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
+import emailjs from '@emailjs/browser'
 
 import isEmailValid from '../../utils/isEmailValid'
 import useErrors from '../../hooks/useErrors.jsx'
@@ -13,6 +14,8 @@ import {
 } from './styles'
 
 export default function Contact() {
+
+  const form = useRef()
 
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
@@ -59,6 +62,19 @@ export default function Contact() {
   function handleSubmit(event) {
     event.preventDefault()
 
+    emailjs
+      .sendForm('service_0vxk9c7', 'template_aya64wc', form.current, {
+        publicKey: 'OkxcgYvYGvRqqm46p',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!')
+        },
+        (error) => {
+          console.log('FAILED...', error.text)
+        },
+      )
+
     console.log({
       name, email, message,
     })
@@ -66,13 +82,14 @@ export default function Contact() {
 
   return (
     <Container>
-      <Form onSubmit={handleSubmit} noValidate>
-        <span>Entre em contato:</span>
+      <Form ref={form} onSubmit={handleSubmit} noValidate>
+        <span>Entre em contato</span>
         <FormGroup error={getErrorMessageByFieldName('name')}>
           <Input
             error={getErrorMessageByFieldName('name')}
             placeholder='Nome *'
             value={name}
+            name="name"
             onChange={handleNameChange}
           />
           {getErrorMessageByFieldName('name') && (
@@ -86,6 +103,7 @@ export default function Contact() {
             error={getErrorMessageByFieldName('email')}
             placeholder='E-mail *'
             value={email}
+            name="email"
             onChange={handleEmailChange}
           />
           {getErrorMessageByFieldName('email') && (
@@ -98,6 +116,7 @@ export default function Contact() {
             type='text'
             placeholder='Mensagem *'
             value={message}
+            name="message"
             onChange={handleMessageChange}
             maxLength="700"
           />
