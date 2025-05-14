@@ -4,14 +4,14 @@ export const Container = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.6rem 3.2rem;
+  padding: 1.2rem 0;
   background:rgb(255, 255, 255);
   color:  #0F172A;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
-  position: fixed;
+  /* position: fixed;
   width: 100%;
   top: 0;
-  left: 0;
+  left: 0; */
 `
 
 export const Logo = styled.div`
@@ -28,7 +28,7 @@ export const Logo = styled.div`
 export const Navigation = styled.nav`
 ul {
     display: flex;
-    gap: 24px;
+    gap: 1.6rem;
   }
 
   a {
@@ -52,13 +52,12 @@ ul {
     background: #e31b6d;
     color: #ffffff;
     box-shadow: 1px 1px 0 #e31b6d;
-    /* border: 1px solid #e31b6d; */
   }
 `
 
 export const SocialIcons = styled.div`
   display: flex;
-  gap: 8px;
+  gap: 18px;
 
   .icons {
     color: #000000;

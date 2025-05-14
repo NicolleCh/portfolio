@@ -6,7 +6,7 @@ export const Container = styled.div`
     align-items: center;
     justify-content: center;
     margin: 0 auto;
-    height: 80vh;
+    background:rgb(211, 211, 211);
 `
 
 export const PageTitle = styled.span`
@@ -17,9 +17,9 @@ export const PageTitle = styled.span`
 `
 
 export const Form = styled.form`
-    width: 775px;
-    background:#ffdeeb;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    padding: 0 6.4rem;
+    background:rgb(253, 194, 218);
+    /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08); */
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -42,7 +42,7 @@ export const Form = styled.form`
 `
 
 export const FormGroup = styled.div`
-    width: 80%;
+    width: 775px;
 
     & + & {
     margin-top: 16px;
@@ -51,21 +51,29 @@ export const FormGroup = styled.div`
 
 export const Input = styled.input`
     color:rgb(57, 58, 58);
-    border: 1px solid #000000;
+    border: 1px solid transparent;
     border-radius: 12px;
     background: #fff;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.04);
     height: 52px;
     width: 100%;
     outline: none;
     padding: 0 16px;
     font-size: 16px;
-    transition: border-color 0.2s ease-in;
+    transition: 200ms all ease-in;
     appearance: none;
+    box-shadow: 1px 10px 20px rgba(0, 0, 0, 0.08);
+
+
+    &:focus {
+    box-shadow: 1px 2px 20px rgba(227, 27, 110, 1);
+    }
+
+
 `
 
 export const TextArea = styled.textarea`
-    border: 1px solid #000000;
+    border: 1px solid transparent;
+    outline: none;
     border-radius: 12px;
     height: 52px;
     background: #fff;
@@ -74,7 +82,11 @@ export const TextArea = styled.textarea`
     width: 100%;
     padding: 16px;
     font-size: 16px;
-    transition: border-color 0.2s ease-in;
+    transition: 200ms all ease-in;
+
+     &:focus {
+      border: 1px solid #000000;
+    }
 `
 
 export const Button = styled.button`

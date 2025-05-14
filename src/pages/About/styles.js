@@ -2,11 +2,11 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
-  align-items: center;
   justify-content: center;
-  padding: 6.4rem 3.2rem;
+  align-items: baseline;
+  padding: 3.2rem 0;
+  background:rgb(255, 179, 179);
   gap: 6rem;
-  height: 100vh;
 
   h2 {
     font-size: 2.5rem;
@@ -19,7 +19,6 @@ export const Container = styled.div`
 export const AboutMe = styled.div`
   text-align: center;
   flex: 1;
-  margin-bottom: 4rem;
 
   h2 {
     margin-bottom: 3rem;
@@ -60,7 +59,6 @@ export const Skills = styled.div`
   display: flex;
   flex-direction: column;
   gap: 3rem;
-  margin-bottom: 4rem;
   flex: 1;
 
   ul {

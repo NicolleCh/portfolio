@@ -1,58 +1,10 @@
-// import { Container, Logo, Navigation, SocialIcons } from "./styles"
-
-// import { FaLinkedin, FaGithub } from "react-icons/fa";
-// import { LiaDev } from 'react-icons/lia'
-
-// import { NavLink } from "react-router";
-
-// export default function Header() {
-
-//   const handleScroll = (id) => {
-//     const element = document.getElementById(id);
-//     element ? element.scrollIntoView({ behavior: 'smooth' }) : null
-//   }
-
-//   return (
-//     <Container>
-//       <Logo>
-//         <LiaDev size={48} />
-//         <h2>Nicolle</h2>
-//       </Logo>
-
-//       <Navigation>
-//         <ul>
-//           <li><NavLink to='home'  onClick={() => handleScroll('home')}>\ Home</NavLink></li>
-//           <li><NavLink to='about'  onClick={() => handleScroll('about')}>\ Sobre</NavLink></li>
-//           <li><NavLink to='projects'  onClick={() => handleScroll('projects')}>\ Projetos</NavLink></li>
-//           <li><NavLink to='contact'  onClick={() => handleScroll('contact')}>\ Contato</NavLink></li>
-//         </ul>
-//       </Navigation>
-
-//       <SocialIcons>
-//         <a
-//           target="_blank"
-//           rel="noopener noreferrer"
-//           href="https://www.linkedin.com/in/nicollascrg/">
-//           <FaLinkedin className="icons" title="Icone do linkedin" size={48} />
-//         </a>
-
-//         <a
-//           target="_blank"
-//           rel="noopener noreferrer"
-//           href="https://github.com/NicolleCh">
-//           <FaGithub className="icons" title="Icone do github" size={48} />
-//         </a>
-//       </SocialIcons>
-//     </Container>
-//   )
-// }
-
-
 import { Container, Logo, Navigation, SocialIcons } from "./styles";
+
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { LiaDev } from 'react-icons/lia';
-import { NavLink } from "react-router-dom"; // 👈 Corrija a importação (deve ser "react-router-dom")
+
 import { useState, useEffect } from 'react';
+
 export default function Header() {
   const [activeSection, setActiveSection] = useState('home');
 
@@ -103,7 +55,7 @@ export default function Header() {
                 handleScroll('home');
               }}
             >
-              Home
+              \ Home
             </a>
           </li>
 
@@ -116,7 +68,7 @@ export default function Header() {
                 handleScroll('about');
               }}
             >
-              Sobre
+              \ Sobre
             </a>
           </li>
 
@@ -129,7 +81,7 @@ export default function Header() {
                 handleScroll('projects');
               }}
             >
-              Projetos
+              \ Projetos
             </a>
           </li>
 
@@ -142,7 +94,7 @@ export default function Header() {
                 handleScroll('contact');
               }}
             >
-              Contato
+              \ Contato
             </a>
           </li>
         </ul>

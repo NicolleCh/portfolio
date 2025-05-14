@@ -14,12 +14,18 @@ export default createGlobalStyle`
     scroll-behavior: smooth;
   }
 
+  html, body {
+    width: 100%;
+    height: 100%;
+  }
+
   footer, header, nav, section {
     display: block;
   }
 
   body {
     line-height: 1;
+    padding: 0 3.2rem;
   }
 
   ol, ul {

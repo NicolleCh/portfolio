@@ -3,14 +3,13 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  margin-top: 3rem;
+  background:rgb(163, 163, 163);
 `
 
 export const Header = styled.header`
   display: flex;
   flex-direction: column;
-  margin-bottom: 4rem;
-  padding: 3.2rem;
+  padding: 3.2rem 0;
 
   h2 {
     font-size: 2.5rem;

@@ -66,6 +66,12 @@ export default function About() {
           />
 
           <SkillList
+            title="React"
+            image={<SiReact title="react" color="#00ccff" size={56} />}
+            progress={'10%'}
+          />
+
+          <SkillList
             title="Sass"
             image={<SiSass title="sass" color="#CC6699" size={56} />}
             progress={'0%'}

@@ -4,18 +4,17 @@ export const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 3.2rem;
   height: 100vh;
+  background: #dddddd;
 `
 
 export const MyInfo = styled.div`
   display: flex;
   flex-direction: column;
-  flex: 1;
-  gap: 1rem;
+  gap: 1.2rem;
 
   h1 {
-    font-size: 4rem;
+    font-size: 4.6rem;
     font-weight: 300;
     color:rgb(0, 0, 0);
     text-transform: uppercase;
@@ -36,11 +35,10 @@ export const MyInfo = styled.div`
     font-size: 1.6rem;
     line-height: 1.4;
     color:rgb(95, 95, 95);
+    width: 60vw;
   }
 `
 
 export const MyPhoto = styled.div`
-  display: flex;
-  justify-content: center;
-  flex: 1;
+
 `
