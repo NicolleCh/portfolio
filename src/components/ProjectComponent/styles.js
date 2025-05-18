@@ -2,33 +2,40 @@ import styled from "styled-components";
 
 export const Project = styled.div`
   display: flex;
-  gap: 2rem;
+  gap: 4rem;
   align-items: center;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
-  padding: 1.6rem 3.2rem;
-  margin-bottom: 4rem;
+  padding: 1.6rem;
+  margin-bottom: 3.2rem;
+
+
+  img {
+    border: 1px solid ${({ theme }) => theme.colors.mainPink};
+    box-shadow: 5px 5px 10px ${({ theme }) => theme.colors.mainPink};
+    border-radius: 8px;
+    padding: 1.6rem;
+  }
 `
 
 export const ProjectInfo = styled.div`
   display: flex;
   flex-direction: column;
 
-
   span {
-    font-size: 24px;
-    color:rgb(83, 83, 83);
+    font-size: 20px;
     font-style: italic;
+    color: ${({ theme }) => theme.colors.mainPink};
   }
 
   h3 {
-    font-size: 32px;
-    margin: 12px 0 8px;
+    font-size: 36px;
+    margin: 12px 0 24px;
+    color: ${({ theme }) => theme.colors.greyDarker};
   }
 
   p {
-    font-size: 24px;
-    color:rgb(83, 83, 83);
+    font-size: 22px;
     margin-bottom: 32px;
+    color:${({ theme }) => theme.colors.greyDarker};
   }
 `
 
@@ -38,29 +45,18 @@ export const BtnGroup = styled.div`
   gap: 32px;
 
   a {
-    color:rgb(57, 58, 58);
-    border: 1px solid #000000;
     font-weight: 400;
     font-size: 1.2rem;
     transition: 200ms all ease;
     padding: 12px 24px;
     border-radius: 12px;
+    color:${({ theme }) => theme.colors.greyDarker};
+    border: 1px solid ${({ theme }) => theme.colors.black};
   }
 
   a:hover {
-    background: #e31b6d;
-    color: #ffffff;
-    box-shadow: 1px 1px 0 #e31b6d;
+    color: ${({ theme }) => theme.colors.white};
+    background: ${({ theme }) => theme.colors.mainPink};
+    box-shadow: 1px 1px 0 ${({ theme }) => theme.colors.mainPink};
   }
-`
-
-export const TechsUsed = styled.ul`
-  display: flex;
-  gap: 18px;
-  margin-top: 32px;
-`
-
-export const ProjectPreview = styled.div`
-  flex: 1;
-  padding: 5px;
 `

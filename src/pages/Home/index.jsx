@@ -1,6 +1,9 @@
-import { Container, MyInfo, MyPhoto } from './styles'
+import { Container, MyInfo, MyPhoto, SeeMore } from './styles'
 
-import Lucy from '../../assets/images/lucy.png'
+import Me from '../../assets/images/me.jpg'
+
+import { PiMouseSimpleLight } from "react-icons/pi";
+import { RxDoubleArrowDown } from "react-icons/rx";
 
 export default function Home() {
   return (
@@ -14,8 +17,13 @@ export default function Home() {
       </MyInfo>
 
       <MyPhoto>
-        <img width={450} src={Lucy} alt="My photo" />
+        <img src={Me} alt="My photo" />
       </MyPhoto>
+
+      <SeeMore>
+        <PiMouseSimpleLight  size={40} color='#e31b6d' />
+        <RxDoubleArrowDown className='see-more-arrow' size={40} color='#e31b6d' />
+      </SeeMore>
     </Container>
   )
 }

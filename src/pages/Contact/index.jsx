@@ -11,6 +11,7 @@ import {
   Input,
   TextArea,
   Button,
+  Message
 } from './styles'
 
 export default function Contact() {
@@ -20,6 +21,8 @@ export default function Contact() {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [messageAfterSubmit, setMessageAfterSubmit] = useState({text: '', type: ''})
 
   const {
     errors,
@@ -28,11 +31,10 @@ export default function Contact() {
     getErrorMessageByFieldName,
   } = useErrors()
 
-  const isFormValid = (name && email && message && errors.length === 0)
+  const isFormValid = (name && email && message && isSubmitting === false && errors.length === 0)
 
   function handleNameChange(event) {
     setName(event.target.value)
-
 
     if (!event.target.value) {
       setError({ field: 'name', message: 'Nome é obrigatório' })
@@ -61,6 +63,7 @@ export default function Contact() {
 
   function handleSubmit(event) {
     event.preventDefault()
+    setIsSubmitting(true)
 
     emailjs
       .sendForm('service_0vxk9c7', 'template_aya64wc', form.current, {
@@ -68,16 +71,20 @@ export default function Contact() {
       })
       .then(
         () => {
-          console.log('SUCCESS!')
+          setName('')
+          setEmail('')
+          setMessage('')
+          setIsSubmitting(false)
+          setMessageAfterSubmit({ text: 'Mensagem enviada com sucesso!', type: 'success' })
+          setTimeout(() => setMessageAfterSubmit(''), 5000)
         },
         (error) => {
-          console.log('FAILED...', error.text)
+          setMessageAfterSubmit({ text: `Falha ao enviar mensagem! Erro ${error.status}`, type: 'failed' })
+          setIsSubmitting(false)
+          setTimeout(() => setMessageAfterSubmit(''), 5000)
         },
-      )
 
-    console.log({
-      name, email, message,
-    })
+      )
   }
 
   return (
@@ -130,6 +137,13 @@ export default function Contact() {
             Enviar
           </Button>
         </div>
+
+        {messageAfterSubmit.text && (
+          <Message
+            className={messageAfterSubmit.type}>
+              {messageAfterSubmit.text}
+          </Message>
+        )}
       </Form>
     </Container>
   )

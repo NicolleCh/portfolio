@@ -4,14 +4,31 @@ export const Container = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.2rem 0;
-  background:rgb(255, 255, 255);
-  color:  #0F172A;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
-  /* position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0; */
+  padding: 1.2rem 3.2rem;
+  color: ${({ theme }) => theme.colors.black};
+  background: ${({ theme }) => theme.colors.white};
+  box-shadow: 0 10px 20px ${({ theme }) => theme.colors.boxShadowDarker};
+
+  .menuBtn {
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    right: 12px;
+    top: 12px;
+  }
+
+  @media screen and (max-width: 1106px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0.4rem 0;
+    margin-bottom: 3rem;
+
+    .menuBtn {
+      display: block;
+    }
+  }
 `
 
 export const Logo = styled.div`
@@ -26,14 +43,35 @@ export const Logo = styled.div`
 `
 
 export const Navigation = styled.nav`
-ul {
-    display: flex;
-    gap: 1.6rem;
+
+`
+
+export const NavList = styled.ul`
+  display: flex;
+  gap: 1.6rem;
+
+  @media screen and (max-width: 1106px) {
+    display: ${(props) => (props.isMenuOpen ? 'block' : 'none')};
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    margin: 8px 0;
+    text-align: center;
+
+    li + li {
+      margin-top: 4px;
+    }
+
+    li a {
+      border: none;
+      border-radius: 0;
+      font-size: 1.4rem;
+    }
   }
 
   a {
-    color:rgb(57, 58, 58);
-    border: 1px solid #000000;
+    color:${({ theme }) => theme.colors.greyDarker};
+    border: 1px solid ${({ theme }) => theme.colors.black};
     font-weight: 400;
     font-size: 1.2rem;
     transition: 200ms all ease;
@@ -43,15 +81,15 @@ ul {
   }
 
   a.active {
-    color: #ffffff;
-    background: #e31b6d;
-    box-shadow: 1px 1px 0 #e31b6d;
+    color: ${({ theme }) => theme.colors.white};
+    background: ${({ theme }) => theme.colors.mainPink};
+    box-shadow: 1px 1px 0 ${({ theme }) => theme.colors.mainPink};
   }
 
   a:hover {
-    background: #e31b6d;
-    color: #ffffff;
-    box-shadow: 1px 1px 0 #e31b6d;
+    color: ${({ theme }) => theme.colors.white};
+    background: ${({ theme }) => theme.colors.mainPink};
+    box-shadow: 1px 1px 0 ${({ theme }) => theme.colors.mainPink};
   }
 `
 
@@ -60,11 +98,16 @@ export const SocialIcons = styled.div`
   gap: 18px;
 
   .icons {
-    color: #000000;
+    color: ${({ theme }) => theme.colors.black};
     transition: 300ms all ease;
+
+    @media screen and (max-width: 1106px) {
+      width: 32px;
+      display: none;
+    }
   }
 
   .icons:hover {
-    color: #e31b6d;
+    color: ${({ theme }) => theme.colors.mainPink};
   }
 `

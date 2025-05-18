@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  background:rgb(163, 163, 163);
+  padding: 0 3.2rem;
 `
 
 export const Header = styled.header`
@@ -14,14 +14,14 @@ export const Header = styled.header`
   h2 {
     font-size: 2.5rem;
     font-weight: 600;
-    color: #e31b6d;
+    color: ${({ theme }) => theme.colors.mainPink};
     text-align: center;
     margin-bottom: 2rem;
   }
 
   p {
     font-size: 24px;
-    color:rgb(82, 82, 82);
+    color: ${({ theme }) => theme.colors.greyDarker};
     line-height: 1.4;
     text-align: left;
   }

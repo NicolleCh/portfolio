@@ -17,6 +17,10 @@ export default createGlobalStyle`
   html, body {
     width: 100%;
     height: 100%;
+
+    @media screen and (max-width: 1540px) {
+      overflow-x: hidden;
+    }
   }
 
   footer, header, nav, section {
@@ -25,7 +29,6 @@ export default createGlobalStyle`
 
   body {
     line-height: 1;
-    padding: 0 3.2rem;
   }
 
   ol, ul {

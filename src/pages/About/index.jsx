@@ -1,6 +1,9 @@
-import { Container, AboutMe, Skills } from "./styles";
+import { Link } from "react-router";
 
+import { Container, AboutMe, Skills } from "./styles";
 import SkillList from "../../components/SkillList";
+
+import Cv from '../../Docs/CV Nicollas Chagas.pdf'
 
 import {
   SiHtml5,
@@ -12,6 +15,7 @@ import {
   SiStyledcomponents,
   SiNextdotjs,
 } from 'react-icons/si';
+
 
 export default function About() {
   return (
@@ -35,7 +39,13 @@ export default function About() {
           Vamos bater um papo sobre tecnologia, projetos e até mesmo suas recomendações de músicas!?
         </p>
 
-        <button type="button">Download CV</button>
+        <Link
+          target="_blank"
+          rel="noopener noreferrer"
+          to={Cv}
+        >
+          Download CV
+        </Link>
       </AboutMe>
 
       <Skills>

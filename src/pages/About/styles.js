@@ -4,15 +4,14 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: baseline;
-  padding: 3.2rem 0;
-  background:rgb(255, 179, 179);
+  padding: 3.2rem;
   gap: 6rem;
 
   h2 {
     font-size: 2.5rem;
     font-weight: 600;
-    color: #e31b6d;
     text-align: center;
+    color: ${({ theme }) => theme.colors.mainPink};
   }
 `
 
@@ -26,32 +25,33 @@ export const AboutMe = styled.div`
 
   p {
     font-size: 24px;
-    color:rgb(82, 82, 82);
     line-height: 1.4;
     text-align: center;
+    color: ${({ theme }) => theme.colors.greyDarker};
   }
 
   p + p {
     margin-top: 1.2rem;
   }
 
-  button {
+  a {
+    display: inline-block;
     cursor: pointer;
     width: 50%;
     margin-top: 24px;
-    color:rgb(57, 58, 58);
     font-weight: 400;
     font-size: 1.2rem;
     transition: 200ms all ease;
     padding: 12px 24px;
     border-radius: 12px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    color: ${({ theme }) => theme.colors.greyDarker};
+    box-shadow: 0 10px 20px ${({ theme }) => theme.colors.boxShadowDarker};
   }
 
-  button:hover {
-    background: #e31b6d;
-    color: #ffffff;
-    box-shadow: 0 5px 20px #e31b6d;
+  a:hover {
+    color: ${({ theme }) => theme.colors.white};
+    background: ${({ theme }) => theme.colors.mainPink};
+    box-shadow: 0 5px 20px ${({ theme }) => theme.colors.mainPink};
   }
 `
 

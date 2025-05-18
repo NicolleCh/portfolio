@@ -1,6 +1,6 @@
 import { NavLink } from "react-router";
 
-import { Project, ProjectInfo, ProjectPreview, BtnGroup } from './styles'
+import { Project, ProjectInfo, BtnGroup } from './styles'
 
 
 export default function ProjectComponent({
@@ -38,9 +38,11 @@ export default function ProjectComponent({
         </BtnGroup>
       </ProjectInfo>
 
-      <ProjectPreview>
-        <img src={previewImage} width={600} alt="" />
-      </ProjectPreview>
+      <img
+        src={previewImage}
+        width={600}
+        alt={`Preview do projeto ${appName}`}
+      />
     </Project>
   )
 }

@@ -1,14 +1,21 @@
-import { Container, Logo, Navigation, SocialIcons } from "./styles";
+import { Container, Logo, Navigation, NavList, SocialIcons } from "./styles";
 
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { LiaDev } from 'react-icons/lia';
+import { FaBars } from "react-icons/fa";
 
 import { useState, useEffect } from 'react';
 
 export default function Header() {
   const [activeSection, setActiveSection] = useState('home');
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+  function handleMenuOpen() {
+    setIsMenuOpen(!isMenuOpen)
+  }
 
   const handleScroll = (id) => {
+    setIsMenuOpen(false)
     setActiveSection(id);
     const element = document.getElementById(id);
     element?.scrollIntoView({ behavior: 'smooth' });
@@ -44,13 +51,14 @@ export default function Header() {
         <h2>Nicolle</h2>
       </Logo>
 
-      <Navigation>
-        <ul>
+      <Navigation >
+        <NavList isMenuOpen={isMenuOpen}>
           <li>
             <a
               href="#home"
               className={activeSection === 'home' ? 'active' : ''}
               onClick={(e) => {
+
                 e.preventDefault();
                 handleScroll('home');
               }}
@@ -97,7 +105,7 @@ export default function Header() {
               \ Contato
             </a>
           </li>
-        </ul>
+        </NavList>
       </Navigation>
 
       <SocialIcons>
@@ -114,6 +122,8 @@ export default function Header() {
           <FaGithub className="icons" title="Icone do github" size={48} />
         </a>
       </SocialIcons>
+
+      <FaBars className="menuBtn" onClick={handleMenuOpen} size={40} />
     </Container>
   );
 }
