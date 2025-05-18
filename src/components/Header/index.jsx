@@ -1,21 +1,21 @@
-import { Container, Logo, Navigation, NavList, SocialIcons } from "./styles";
+import { Container, Logo, Navigation, NavList, SocialIcons } from './styles';
 
-import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import { LiaDev } from 'react-icons/lia';
-import { FaBars } from "react-icons/fa";
+import { FaBars } from 'react-icons/fa';
 
 import { useState, useEffect } from 'react';
 
 export default function Header() {
   const [activeSection, setActiveSection] = useState('home');
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   function handleMenuOpen() {
-    setIsMenuOpen(!isMenuOpen)
+    setIsMenuOpen(!isMenuOpen);
   }
 
   const handleScroll = (id) => {
-    setIsMenuOpen(false)
+    setIsMenuOpen(false);
     setActiveSection(id);
     const element = document.getElementById(id);
     element?.scrollIntoView({ behavior: 'smooth' });

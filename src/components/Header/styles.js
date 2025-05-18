@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.header`
   display: flex;
@@ -29,7 +29,7 @@ export const Container = styled.header`
       display: block;
     }
   }
-`
+`;
 
 export const Logo = styled.div`
   display: flex;
@@ -40,11 +40,11 @@ export const Logo = styled.div`
   h2 {
     font-size: 1.6rem;
   }
-`
+`;
 
 export const Navigation = styled.nav`
 
-`
+`;
 
 export const NavList = styled.ul`
   display: flex;
@@ -91,7 +91,7 @@ export const NavList = styled.ul`
     background: ${({ theme }) => theme.colors.mainPink};
     box-shadow: 1px 1px 0 ${({ theme }) => theme.colors.mainPink};
   }
-`
+`;
 
 export const SocialIcons = styled.div`
   display: flex;
@@ -110,4 +110,4 @@ export const SocialIcons = styled.div`
   .icons:hover {
     color: ${({ theme }) => theme.colors.mainPink};
   }
-`
+`;

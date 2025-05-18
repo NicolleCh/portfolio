@@ -1,4 +1,4 @@
-import { ListItem } from './styles'
+import { ListItem } from './styles';
 
 export default function SkillList({ image, title }) {
   return (
@@ -6,5 +6,5 @@ export default function SkillList({ image, title }) {
       {image}
       <span>{title}</span>
     </ListItem>
-  )
+  );
 }

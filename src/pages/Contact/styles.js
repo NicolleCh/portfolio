@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
@@ -6,14 +6,14 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-`
+`;
 
 export const PageTitle = styled.span`
   font-weight: bold;
   font-size: 18px;
   font-style: italic;
   margin-bottom: 32px;
-`
+`;
 
 export const Form = styled.form`
   padding: 0 6.4rem;
@@ -36,7 +36,7 @@ export const Form = styled.form`
     margin-top: 8px;
     color:${({ theme }) => theme.colors.orange};
   }
-`
+`;
 
 export const FormGroup = styled.div`
   width: 775px;
@@ -44,7 +44,7 @@ export const FormGroup = styled.div`
   & + & {
     margin-top: 16px;
   }
-`
+`;
 
 export const Input = styled.input`
   border: 1px solid transparent;
@@ -63,7 +63,7 @@ export const Input = styled.input`
   &:focus {
     box-shadow: 1px 2px 20px ${({ theme }) => theme.colors.mainPink};
   }
-`
+`;
 
 export const TextArea = styled.textarea`
   border: 1px solid transparent;
@@ -82,7 +82,7 @@ export const TextArea = styled.textarea`
   &:focus {
     box-shadow: 1px 2px 20px ${({ theme }) => theme.colors.mainPink};
   }
-`
+`;
 
 export const Button = styled.button`
   width: 262px;
@@ -111,7 +111,7 @@ export const Button = styled.button`
     background: ${({ theme }) => theme.colors.mainPink};
     box-shadow: 1px 1px 0 ${({ theme }) => theme.colors.mainPink};
   }
-`
+`;
 
 export const Message = styled.div`
   font-size: 16px;
@@ -131,4 +131,4 @@ export const Message = styled.div`
   border: 1px solid ${({ theme }) => theme.colors.mainPink};
   background-color: ${({ theme }) => theme.colors.errorLighter};
   }
-`
+`;

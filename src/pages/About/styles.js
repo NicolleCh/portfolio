@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
@@ -13,7 +13,7 @@ export const Container = styled.div`
     text-align: center;
     color: ${({ theme }) => theme.colors.mainPink};
   }
-`
+`;
 
 export const AboutMe = styled.div`
   text-align: center;
@@ -53,7 +53,7 @@ export const AboutMe = styled.div`
     background: ${({ theme }) => theme.colors.mainPink};
     box-shadow: 0 5px 20px ${({ theme }) => theme.colors.mainPink};
   }
-`
+`;
 
 export const Skills = styled.div`
   display: flex;
@@ -67,4 +67,4 @@ export const Skills = styled.div`
     row-gap: 5rem;
     text-align: center;
   }
-`
+`;

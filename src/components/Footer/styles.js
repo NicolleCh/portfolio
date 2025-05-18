@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.footer`
   background: ${({ theme }) => theme.colors.mainPink};
@@ -11,4 +11,4 @@ export const Container = styled.footer`
     padding: 1.6rem 0;
     font-size: 12px;
   }
-`
+`;

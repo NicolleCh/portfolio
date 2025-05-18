@@ -1,6 +1,6 @@
-import { NavLink } from "react-router";
+import { NavLink } from 'react-router';
 
-import { Project, ProjectInfo, BtnGroup } from './styles'
+import { Project, ProjectInfo, BtnGroup } from './styles';
 
 
 export default function ProjectComponent({
@@ -9,7 +9,7 @@ export default function ProjectComponent({
   appDescription,
   liveWebsiteLink,
   githubCodeLink,
-  previewImage,
+  previewImage
 }) {
 
   return (
@@ -44,5 +44,5 @@ export default function ProjectComponent({
         alt={`Preview do projeto ${appName}`}
       />
     </Project>
-  )
+  );
 }

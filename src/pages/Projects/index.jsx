@@ -1,8 +1,8 @@
-import { Container, Header } from "./styles"
+import { Container, Header } from './styles';
 
-import ProjectComponent from "../../components/ProjectComponent"
+import ProjectComponent from '../../components/ProjectComponent';
 
-import Website from './../../assets/images/website.png'
+import Website from './../../assets/images/website.png';
 
 export default function Projects() {
   return (
@@ -39,5 +39,5 @@ export default function Projects() {
         previewImage={Website}
       />
     </Container >
-  )
+  );
 }

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import './styles.css';
-import { FaArrowAltCircleUp } from "react-icons/fa";
+import { FaArrowAltCircleUp } from 'react-icons/fa';
 
 export default function Arrow() {
   const [showArrow, setShowArrow] = useState(false);

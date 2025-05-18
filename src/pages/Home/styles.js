@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
@@ -18,7 +18,7 @@ export const Container = styled.div`
     padding: 0 1.2rem;
   }
 
-`
+`;
 
 export const SeeMore = styled.div`
   display: flex;
@@ -50,7 +50,7 @@ export const SeeMore = styled.div`
   @media screen and (max-width: 1540px) {
     display: none;
   }
-`
+`;
 
 export const MyInfo = styled.div`
   display: flex;
@@ -101,7 +101,7 @@ export const MyInfo = styled.div`
       font-size: 1.1rem;
     }
   }
-`
+`;
 
 export const MyPhoto = styled.div`
   flex: 1;
@@ -125,4 +125,4 @@ export const MyPhoto = styled.div`
       width: 100%;
     }
   }
-`
+`;

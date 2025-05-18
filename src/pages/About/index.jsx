@@ -1,9 +1,9 @@
-import { Link } from "react-router";
+import { Link } from 'react-router';
 
-import { Container, AboutMe, Skills } from "./styles";
-import SkillList from "../../components/SkillList";
+import { Container, AboutMe, Skills } from './styles';
+import SkillList from '../../components/SkillList';
 
-import Cv from '../../Docs/CV Nicollas Chagas.pdf'
+import Cv from '../../Docs/CV Nicollas Chagas.pdf';
 
 import {
   SiHtml5,
@@ -13,7 +13,7 @@ import {
   SiTypescript,
   SiSass,
   SiStyledcomponents,
-  SiNextdotjs,
+  SiNextdotjs
 } from 'react-icons/si';
 
 
@@ -101,5 +101,5 @@ export default function About() {
         </ul>
       </Skills>
     </Container>
-  )
+  );
 }

@@ -15,8 +15,8 @@ const defaultTheme = {
     successDarker: '#4F8A10',
     successLigher: '#DFF2BF',
     errorDarker: '#cc0033',
-    errorLighter: '#ffb7d5',
+    errorLighter: '#ffb7d5'
   }
-}
+};
 
-export default defaultTheme
+export default defaultTheme;

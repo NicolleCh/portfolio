@@ -1,10 +1,10 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
   padding: 0 3.2rem;
-`
+`;
 
 export const Header = styled.header`
   display: flex;
@@ -29,4 +29,4 @@ export const Header = styled.header`
   p + p {
     margin-top: 12px;
   }
-`
+`;

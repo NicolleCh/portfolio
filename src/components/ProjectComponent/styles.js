@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Project = styled.div`
   display: flex;
@@ -14,7 +14,7 @@ export const Project = styled.div`
     border-radius: 8px;
     padding: 1.6rem;
   }
-`
+`;
 
 export const ProjectInfo = styled.div`
   display: flex;
@@ -37,7 +37,7 @@ export const ProjectInfo = styled.div`
     margin-bottom: 32px;
     color:${({ theme }) => theme.colors.greyDarker};
   }
-`
+`;
 
 export const BtnGroup = styled.div`
   display: flex;
@@ -59,4 +59,4 @@ export const BtnGroup = styled.div`
     background: ${({ theme }) => theme.colors.mainPink};
     box-shadow: 1px 1px 0 ${({ theme }) => theme.colors.mainPink};
   }
-`
+`;

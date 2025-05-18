@@ -1,8 +1,8 @@
-import { useState, useRef } from 'react'
-import emailjs from '@emailjs/browser'
+import { useState, useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
-import isEmailValid from '../../utils/isEmailValid'
-import useErrors from '../../hooks/useErrors.jsx'
+import isEmailValid from '../../utils/isEmailValid';
+import useErrors from '../../hooks/useErrors.jsx';
 
 import {
   Container,
@@ -12,79 +12,79 @@ import {
   TextArea,
   Button,
   Message
-} from './styles'
+} from './styles';
 
 export default function Contact() {
 
-  const form = useRef()
+  const form = useRef();
 
-  const [name, setName] = useState('')
-  const [email, setEmail] = useState('')
-  const [message, setMessage] = useState('')
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [messageAfterSubmit, setMessageAfterSubmit] = useState({text: '', type: ''})
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [messageAfterSubmit, setMessageAfterSubmit] = useState({text: '', type: ''});
 
   const {
     errors,
     setError,
     removeError,
-    getErrorMessageByFieldName,
-  } = useErrors()
+    getErrorMessageByFieldName
+  } = useErrors();
 
-  const isFormValid = (name && email && message && isSubmitting === false && errors.length === 0)
+  const isFormValid = (name && email && message && isSubmitting === false && errors.length === 0);
 
   function handleNameChange(event) {
-    setName(event.target.value)
+    setName(event.target.value);
 
     if (!event.target.value) {
-      setError({ field: 'name', message: 'Nome é obrigatório' })
+      setError({ field: 'name', message: 'Nome é obrigatório' });
     } else {
-      removeError('name')
+      removeError('name');
     }
   }
 
   function handleEmailChange(event) {
-    setEmail(event.target.value)
+    setEmail(event.target.value);
 
     event.target.value && !isEmailValid(event.target.value) ?
       setError({ field: 'email', message: 'E-mail inválido' }) :
-      removeError('email')
+      removeError('email');
   }
 
   function handleMessageChange(event) {
-    setMessage(event.target.value)
+    setMessage(event.target.value);
 
     if (!event.target.value) {
-      setError({ field: 'message', message: 'Mensagem é obrigatória' })
+      setError({ field: 'message', message: 'Mensagem é obrigatória' });
     } else {
-      removeError('message')
+      removeError('message');
     }
   }
 
   function handleSubmit(event) {
-    event.preventDefault()
-    setIsSubmitting(true)
+    event.preventDefault();
+    setIsSubmitting(true);
 
     emailjs
       .sendForm('service_0vxk9c7', 'template_aya64wc', form.current, {
-        publicKey: 'OkxcgYvYGvRqqm46p',
+        publicKey: 'OkxcgYvYGvRqqm46p'
       })
       .then(
         () => {
-          setName('')
-          setEmail('')
-          setMessage('')
-          setIsSubmitting(false)
-          setMessageAfterSubmit({ text: 'Mensagem enviada com sucesso!', type: 'success' })
-          setTimeout(() => setMessageAfterSubmit(''), 5000)
+          setName('');
+          setEmail('');
+          setMessage('');
+          setIsSubmitting(false);
+          setMessageAfterSubmit({ text: 'Mensagem enviada com sucesso!', type: 'success' });
+          setTimeout(() => setMessageAfterSubmit(''), 5000);
         },
         (error) => {
-          setMessageAfterSubmit({ text: `Falha ao enviar mensagem! Erro ${error.status}`, type: 'failed' })
-          setIsSubmitting(false)
-          setTimeout(() => setMessageAfterSubmit(''), 5000)
-        },
+          setMessageAfterSubmit({ text: `Falha ao enviar mensagem! Erro ${error.status}`, type: 'failed' });
+          setIsSubmitting(false);
+          setTimeout(() => setMessageAfterSubmit(''), 5000);
+        }
 
-      )
+      );
   }
 
   return (
@@ -141,10 +141,10 @@ export default function Contact() {
         {messageAfterSubmit.text && (
           <Message
             className={messageAfterSubmit.type}>
-              {messageAfterSubmit.text}
+            {messageAfterSubmit.text}
           </Message>
         )}
       </Form>
     </Container>
-  )
+  );
 }
