@@ -1,3 +1,6 @@
+import styled from 'styled-components';
+
+export const UpButton = styled.div`
 .arrow-icon {
   background: #ffffff;
   border-radius: 100%;
@@ -10,8 +13,8 @@
   opacity: 0;
   transform: translateY(100px);
   visibility: hidden;
-  color: #e31b6d;
-  box-shadow: 0 0 10px 0 rgba(139, 139, 139, 0.8)
+  color: ${({ theme }) => theme.colors.mainPink};
+  box-shadow: 0 0 10px 0 ${({ theme }) => theme.colors.boxShadowLighter};
 }
 
 .arrow-icon.show {
@@ -21,6 +24,7 @@
 }
 
 .arrow-icon:hover {
-  background: #ffffff;
-  color: #ff006a;
+  background: ${({ theme }) => theme.colors.white};
+  color: ${({ theme }) => theme.colors.pink3};
 }
+`;

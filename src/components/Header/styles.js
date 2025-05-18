@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.header`
+  height: 94px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -19,14 +20,14 @@ export const Container = styled.header`
 
   @media screen and (max-width: 1106px) {
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    height: auto;
     width: 100%;
-    padding: 0.4rem 0;
+    padding: 0.4rem 1.2rem;
     margin-bottom: 3rem;
 
     .menuBtn {
       display: block;
+      position: inherit;
     }
   }
 `;
@@ -37,13 +38,22 @@ export const Logo = styled.div`
   align-items: center;
   gap: 12px;
 
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+  }
+
   h2 {
     font-size: 1.6rem;
   }
-`;
 
-export const Navigation = styled.nav`
-
+  @media screen and (max-width: 1106px) {
+    width: 100vw;
+    justify-content: space-between;
+    padding: 0 1.2rem;
+  }
 `;
 
 export const NavList = styled.ul`
@@ -51,25 +61,25 @@ export const NavList = styled.ul`
   gap: 1.6rem;
 
   @media screen and (max-width: 1106px) {
-    display: ${(props) => (props.isMenuOpen ? 'block' : 'none')};
+    display: ${(props) => (props.$isMenuOpen ? 'block' : 'none')};
     flex-direction: column;
     align-items: center;
     width: 100vw;
     margin: 8px 0;
-    text-align: center;
+    text-align: left;
 
     li + li {
       margin-top: 4px;
     }
 
-    li a {
+    li .nav-link  {
       border: none;
       border-radius: 0;
       font-size: 1.4rem;
     }
   }
 
-  a {
+  .nav-link {
     color:${({ theme }) => theme.colors.greyDarker};
     border: 1px solid ${({ theme }) => theme.colors.black};
     font-weight: 400;
@@ -80,13 +90,13 @@ export const NavList = styled.ul`
     cursor: pointer;
   }
 
-  a.active {
+  .nav-link:hover {
     color: ${({ theme }) => theme.colors.white};
     background: ${({ theme }) => theme.colors.mainPink};
     box-shadow: 1px 1px 0 ${({ theme }) => theme.colors.mainPink};
   }
 
-  a:hover {
+  .home {
     color: ${({ theme }) => theme.colors.white};
     background: ${({ theme }) => theme.colors.mainPink};
     box-shadow: 1px 1px 0 ${({ theme }) => theme.colors.mainPink};

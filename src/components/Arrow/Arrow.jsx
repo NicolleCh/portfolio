@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import './styles.css';
+import { UpButton } from './styles';
 import { FaArrowAltCircleUp } from 'react-icons/fa';
 
 export default function Arrow() {
@@ -23,10 +23,12 @@ export default function Arrow() {
   }, []);
 
   return (
-    <FaArrowAltCircleUp
-      onClick={handleScrollUp}
-      className={`arrow-icon ${showArrow ? 'show' : ''}`}
-      size={110}
-    />
+    <UpButton>
+      <FaArrowAltCircleUp
+        onClick={handleScrollUp}
+        className={`arrow-icon ${showArrow ? 'show' : ''}`}
+        size={110}
+      />
+    </UpButton>
   );
 }

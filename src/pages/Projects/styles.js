@@ -4,6 +4,10 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   padding: 0 3.2rem;
+
+  @media screen and (max-width: 1106px) {
+    padding: 0 1.2rem;
+  }
 `;
 
 export const Header = styled.header`
@@ -28,5 +32,9 @@ export const Header = styled.header`
 
   p + p {
     margin-top: 12px;
+  }
+
+  @media screen and (max-width: 1106px) {
+    p { font-size: 18px; }
   }
 `;

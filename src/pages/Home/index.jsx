@@ -1,9 +1,12 @@
 import { Container, MyInfo, MyPhoto, SeeMore } from './styles';
 
-import Me from '../../assets/images/me.jpg';
+import Me from '../../assets/images/EU.png';
 
 import { PiMouseSimpleLight } from 'react-icons/pi';
 import { RxDoubleArrowDown } from 'react-icons/rx';
+
+import { Link } from 'react-router';
+// import Cv from '../../Docs/';
 
 export default function Home() {
   return (
@@ -14,6 +17,14 @@ export default function Home() {
         <p>
           Apaixonada por desenvolver aplicações funcionais com técnicas de acessibilidade e performance, sempre pensando na experiência final do usuário! Atualmente estou entrando de cabeça no backend para criar aplicações cada vez mais robustas e completas.
         </p>
+
+        <Link
+          target="_blank"
+          rel="noopener noreferrer"
+          // to={Cv}
+        >
+          Download CV
+        </Link>
       </MyInfo>
 
       <MyPhoto>

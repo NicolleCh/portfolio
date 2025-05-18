@@ -1,13 +1,13 @@
-import { Container, Logo, Navigation, NavList, SocialIcons } from './styles';
+import { Container, Logo, NavList, SocialIcons } from './styles';
 
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import { LiaDev } from 'react-icons/lia';
 import { FaBars } from 'react-icons/fa';
 
-import { useState, useEffect } from 'react';
+import { useState} from 'react';
+import { NavLink } from 'react-router';
 
 export default function Header() {
-  const [activeSection, setActiveSection] = useState('home');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   function handleMenuOpen() {
@@ -16,97 +16,63 @@ export default function Header() {
 
   const handleScroll = (id) => {
     setIsMenuOpen(false);
-    setActiveSection(id);
     const element = document.getElementById(id);
-    element?.scrollIntoView({ behavior: 'smooth' });
+    element?.scrollIntoView();
   };
-
-  useEffect(() => {
-    const handleScrollEvent = () => {
-      const sections = ['home', 'about', 'projects', 'contact'];
-      const scrollPosition = window.scrollY + 100;
-
-      for (const section of sections) {
-        const element = document.getElementById(section);
-        if (element) {
-          const offsetTop = element.offsetTop;
-          const offsetHeight = element.offsetHeight;
-
-          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
-            setActiveSection(section);
-            break;
-          }
-        }
-      }
-    };
-
-    window.addEventListener('scroll', handleScrollEvent);
-    return () => window.removeEventListener('scroll', handleScrollEvent);
-  }, []);
 
   return (
     <Container>
       <Logo>
-        <LiaDev size={48} />
-        <h2>Nicolle</h2>
+        <div>
+          <LiaDev size={48} />
+          <h2>Nicolle</h2>
+        </div>
+        <FaBars className="menuBtn" onClick={handleMenuOpen} size={40} />
       </Logo>
 
-      <Navigation >
-        <NavList isMenuOpen={isMenuOpen}>
+      <nav>
+        <NavList $isMenuOpen={isMenuOpen}>
           <li>
-            <a
+            <NavLink
               href="#home"
-              className={activeSection === 'home' ? 'active' : ''}
-              onClick={(e) => {
-
-                e.preventDefault();
-                handleScroll('home');
-              }}
+              className='nav-link home'
+              onClick={() => { handleScroll('home'); }}
             >
               \ Home
-            </a>
+            </NavLink>
           </li>
 
           <li>
-            <a
+            <NavLink
               href="#about"
-              className={activeSection === 'about' ? 'active' : ''}
-              onClick={(e) => {
-                e.preventDefault();
-                handleScroll('about');
-              }}
+              className='nav-link'
+              onClick={() => { handleScroll('about'); }}
             >
               \ Sobre
-            </a>
+            </NavLink>
           </li>
 
           <li>
-            <a
+            <NavLink
               href="#projects"
-              className={activeSection === 'projects' ? 'active' : ''}
-              onClick={(e) => {
-                e.preventDefault();
-                handleScroll('projects');
-              }}
+              className='nav-link'
+              onClick={() => { handleScroll('projects'); }}
             >
               \ Projetos
-            </a>
+            </NavLink>
           </li>
 
           <li>
-            <a
+            <NavLink
               href="#contact"
-              className={activeSection === 'contact' ? 'active' : ''}
-              onClick={(e) => {
-                e.preventDefault();
-                handleScroll('contact');
-              }}
+              className='nav-link'
+              onClick={() => { handleScroll('contact'); }}
             >
               \ Contato
-            </a>
+            </NavLink>
           </li>
         </NavList>
-      </Navigation>
+      </nav>
 
       <SocialIcons>
         <a
@@ -122,8 +88,6 @@ export default function Header() {
           <FaGithub className="icons" title="Icone do github" size={48} />
         </a>
       </SocialIcons>
-
-      <FaBars className="menuBtn" onClick={handleMenuOpen} size={40} />
     </Container>
   );
 }

@@ -13,13 +13,24 @@ export const Container = styled.div`
     text-align: center;
     color: ${({ theme }) => theme.colors.mainPink};
   }
+
+  @media screen and (max-width: 1106px) {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 1.2rem;
+    gap: 3rem;
+
+    p {
+      font-size: 18px;
+    }
+  }
 `;
 
 export const AboutMe = styled.div`
-  text-align: center;
   flex: 1;
 
   h2 {
+    text-align: center;
     margin-bottom: 3rem;
   }
 
@@ -34,24 +45,9 @@ export const AboutMe = styled.div`
     margin-top: 1.2rem;
   }
 
-  a {
-    display: inline-block;
-    cursor: pointer;
-    width: 50%;
-    margin-top: 24px;
-    font-weight: 400;
-    font-size: 1.2rem;
-    transition: 200ms all ease;
-    padding: 12px 24px;
-    border-radius: 12px;
-    color: ${({ theme }) => theme.colors.greyDarker};
-    box-shadow: 0 10px 20px ${({ theme }) => theme.colors.boxShadowDarker};
-  }
-
-  a:hover {
-    color: ${({ theme }) => theme.colors.white};
-    background: ${({ theme }) => theme.colors.mainPink};
-    box-shadow: 0 5px 20px ${({ theme }) => theme.colors.mainPink};
+  @media screen and (max-width: 1106px) {
+    h2  { margin: 1rem 0; }
+    p   { font-size: 18px; }
   }
 `;
 
@@ -66,5 +62,19 @@ export const Skills = styled.div`
     grid-template-columns: repeat(3, 33%);
     row-gap: 5rem;
     text-align: center;
+  }
+
+  @media screen and (max-width: 1106px) {
+    padding: 0 1.2rem;
+    width: 100vw;
+
+    ul {
+      grid-template-columns: repeat(4, 25%);
+      row-gap: 2rem;
+
+      @media screen and (max-width: 446px) {
+        grid-template-columns: repeat(2, 50%);
+      }
+    }
   }
 `;

@@ -21,6 +21,12 @@ export default createGlobalStyle`
     @media screen and (max-width: 1540px) {
       overflow-x: hidden;
     }
+
+    @media screen and (max-width: 1106px) {
+      body {
+        padding-top: 0;
+      }
+    }
   }
 
   footer, header, nav, section {

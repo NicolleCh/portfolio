@@ -6,6 +6,11 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
   margin: 0 auto;
+  background:rgba(0, 0, 0, 0.05);
+
+  @media screen and (max-width: 1106px) {
+    width: 100%;
+  }
 `;
 
 export const PageTitle = styled.span`
@@ -17,7 +22,6 @@ export const PageTitle = styled.span`
 
 export const Form = styled.form`
   padding: 0 6.4rem;
-  border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -36,6 +40,11 @@ export const Form = styled.form`
     margin-top: 8px;
     color:${({ theme }) => theme.colors.orange};
   }
+
+  @media screen and (max-width: 1106px) {
+    width: 100%;
+    padding: 0 1.2rem;
+  }
 `;
 
 export const FormGroup = styled.div`
@@ -43,6 +52,11 @@ export const FormGroup = styled.div`
 
   & + & {
     margin-top: 16px;
+  }
+
+  @media screen and (max-width: 1106px) {
+    width: 100%;
+
   }
 `;
 

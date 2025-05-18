@@ -1,12 +1,13 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import stripPlugin from 'vite-plugin-strip';
 
-// https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()]
-  // server: {
-  //   host: '0.0.0.0',
-  //   port: 5173,
-  //   strictPort: true,
-  // }
+  plugins: [
+    react(),
+    stripPlugin({
+      include: ['**/*.(ts|tsx|js|jsx)'],
+      functions: ['console.log', 'console.debug', 'console.warn']
+    })
+  ]
 });

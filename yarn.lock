@@ -1997,6 +1997,11 @@ vary@^1, vary@^1.1.2:
   resolved "https://registry.yarnpkg.com/vary/-/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
   integrity sha512-BNGbWLfd0eUPabhkXUVm0j8uuvREyTh5ovRa/dyow/BqAbZJyC+5fU+IzQOzmAKzYqYRAISoRhdQr3eIZ/PXqg==
 
+vite-plugin-strip@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/vite-plugin-strip/-/vite-plugin-strip-1.1.0.tgz#ae8d64a0b816bb18cea3beaca225eb0609c0957c"
+  integrity sha512-Owy8Bt8Kmb35Do1DDuzUWo6OpwSpPh24j/xYYQPrvjdDToKqvRKnoPy1W4DIz0KLx/RB1uaH/vrIGFzEYdEf5A==
+
 vite@^6.3.5:
   version "6.3.5"
   resolved "https://registry.yarnpkg.com/vite/-/vite-6.3.5.tgz#fec73879013c9c0128c8d284504c6d19410d12a3"

@@ -7,17 +7,17 @@ export const Container = styled.div`
   height: 100vh;
   padding: 0 3.2rem;
 
-  @media (max-width: 1540px) {
-    height: 100%;
-    margin: 2rem 0;
-  }
-
   @media screen and (max-width: 1106px) {
-    flex-direction: column;
+    height: auto;
+    flex-direction: row;
     gap: 3rem;
     padding: 0 1.2rem;
+    margin-bottom: 32px
   }
 
+  @media screen and (max-width: 790px) {
+    flex-direction: column;
+  }
 `;
 
 export const SeeMore = styled.div`
@@ -82,24 +82,34 @@ export const MyInfo = styled.div`
     color: ${({ theme }) => theme.colors.greyLighter};
   }
 
-  @media (max-width: 1540px) {
-    h1 {
-      font-size: 3.2rem;
-    }
+  a {
+    text-align: center;
+    width: 25%;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 1.2rem;
+    transition: 200ms all ease;
+    padding: 12px 24px;
+    border-radius: 12px;
+    color: ${({ theme }) => theme.colors.white};
+    background: ${({ theme }) => theme.colors.mainPink};
+    box-shadow: 0 10px 20px ${({ theme }) => theme.colors.boxShadowDarker};
+  }
 
-    p, span {
-      font-size: 1.2rem;
-    }
+    a:hover {
+    box-shadow: 0 5px 20px ${({ theme }) => theme.colors.mainPink};
+  }
+
+  @media (max-width: 1540px) {
+    h1      { font-size: 3.2rem; }
+    p, span { font-size: 1.2rem; }
+    a       { width: 100%; }
   }
 
   @media (max-width: 446px) {
-    h1 {
-      font-size: 2.2rem;
-    }
-
-    p, span {
-      font-size: 1.1rem;
-    }
+    h1      { font-size: 2.2rem; }
+    p, span { font-size: 1.1rem; }
+    a       { width: 100%; }
   }
 `;
 
@@ -108,13 +118,14 @@ export const MyPhoto = styled.div`
   text-align: right;
 
   img {
-    width: 600px;
+    width: 700px;
+    height: 400px;
     border-radius: 20px;
   }
 
   @media (max-width: 1540px) {
     img {
-      width: 500px;
+      width: 450px;
     }
   }
 
@@ -123,6 +134,7 @@ export const MyPhoto = styled.div`
     img {
       text-align: center;
       width: 100%;
+      height: 250px;
     }
   }
 `;

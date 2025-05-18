@@ -8,7 +8,7 @@ export default function Projects() {
   return (
     <Container id="projects">
       <Header>
-        <h2>Projetos Pessoais</h2>
+        <h2>Projetos</h2>
         <p>Bem vindo(a) a seção dos meus projetos pessoais! Aqui você irá encontrar uma coleção de projetos desenvolvidos que vão desde o HTML e CSS até React e Node.js. Sinta-se a vontade para ver e testar as aplicações rodando na web e também para acessar os códigos disponíveis no GitHub!</p>
       </Header>
 
